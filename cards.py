@@ -28,4 +28,3 @@ def spades_high(card):
 
 
 deck = FrenchDeck()
-
