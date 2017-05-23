@@ -29,5 +29,3 @@ def spades_high(card):
 
 deck = FrenchDeck()
 
-for card in sorted(deck, key=spades_high):
-    print(card)
