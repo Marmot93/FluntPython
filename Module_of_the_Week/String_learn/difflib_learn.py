@@ -1,10 +1,12 @@
-from difflib import SequenceMatcher, Differ
+from difflib import SequenceMatcher, Differ, get_close_matches
 
 # SequenceMatcher
 # 对比字符串
 A = "private Thread currentThread;"
 B = "private volatile Thread currentThread;"
+# SequenceMatcher（junk, a, b）
 s = SequenceMatcher(lambda x: x == " ", A, B)
+
 # 相似度
 print('相似度', round(s.ratio(), 3))
 
@@ -35,3 +37,7 @@ d = Differ()
 # 传入两个字符串列表
 diff = d.compare(text1_l, text2_l)
 print('\n'.join(diff))
+
+# 匹配列表中的字符串 （字符串， 列表， 最大匹配返回数， 相似度）
+x = get_close_matches("appel", ["ape", "apple", "peach", "puppy"], n=1, cutoff=0.6)
+print(x)
