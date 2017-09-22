@@ -1,4 +1,4 @@
-from difflib import SequenceMatcher, Differ, get_close_matches
+from difflib import SequenceMatcher, Differ, get_close_matches, IS_LINE_JUNK
 
 # SequenceMatcher
 # 对比字符串
@@ -27,7 +27,6 @@ for opcode in s.get_opcodes():
     # print("%6s a[%d:%d] b[%d:%d]" % opcode)
     print("{:<8} a[{}:{}] b[{}:{}]".format(*opcode))
 
-
 # Differ
 # 字符串列表对比
 print('\n字符串列表对比')
@@ -41,3 +40,8 @@ print('\n'.join(diff))
 # 匹配列表中的字符串 （字符串， 列表， 最大匹配返回数， 相似度）
 x = get_close_matches("appel", ["ape", "apple", "peach", "puppy"], n=1, cutoff=0.6)
 print(x)
+
+# 匹配垃圾行
+print(IS_LINE_JUNK('\n'))  # True
+print(IS_LINE_JUNK('  #   \n'))  # True
+print(IS_LINE_JUNK('hello\n'))  # False
