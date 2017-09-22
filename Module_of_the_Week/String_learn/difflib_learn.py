@@ -25,6 +25,7 @@ for opcode in s.get_opcodes():
     # print("%6s a[%d:%d] b[%d:%d]" % opcode)
     print("{:<8} a[{}:{}] b[{}:{}]".format(*opcode))
 
+
 # Differ
 # 字符串列表对比
 print('\n字符串列表对比')
