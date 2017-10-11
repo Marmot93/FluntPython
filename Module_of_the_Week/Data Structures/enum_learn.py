@@ -1,8 +1,9 @@
 import enum
 
+
 @enum.unique
 class BugStatus(enum.IntEnum):
-# class BugStatus(enum.Enum):
+    # class BugStatus(enum.Enum):
 
     new = 7
     incomplete = 6

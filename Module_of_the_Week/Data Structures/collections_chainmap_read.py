@@ -21,3 +21,8 @@ for k, v in m.items():
 print()
 
 print('"d" in m: {}'.format(('d' in m)))
+
+m = collections.ChainMap(a, b)
+print('Before: {}'.format(m['c']))
+a['c'] = 'E'
+print('After : {}'.format(m['c']))
