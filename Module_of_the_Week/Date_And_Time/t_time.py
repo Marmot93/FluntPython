@@ -1,3 +1,4 @@
+import datetime
 import textwrap
 import time
 
@@ -35,4 +36,6 @@ print(time.mktime(time.localtime()))
 print(time.strftime('%Y-%m-%d %H:%M:%S'))
 # str to struct_time
 print(time.strptime("2017-11-28 15:09:44", '%Y-%m-%d %H:%M:%S'))
+
+print(datetime.datetime.strptime("2017-11-28" + " 23:59:59", "%Y-%m-%d %H:%M:%S"))
 

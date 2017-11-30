@@ -9,3 +9,5 @@ print('Original values:', values)
 print('Format string  :', s.format)
 print('Uses           :', s.size, 'bytes')
 print('Packed Value   :', binascii.hexlify(packed_data))
+
+import functools
