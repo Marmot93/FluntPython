@@ -9,7 +9,7 @@ if __name__ == "__main__":
         city = sys.argv[1]
     # 接受错误 给出默认值
     except Exception:  # IndexError:
-        city = "上海"
+        city = "成都"
     try:
         day = sys.argv[2]
     except Exception:
