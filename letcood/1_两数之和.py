@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # @Time    : 2018/7/16 6:07 PM
 # @Author  : Marmot
-# @File    : 两数之和.py
+# @File    : 1_两数之和.py
 
 
 class Solution(object):
