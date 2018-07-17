@@ -10,4 +10,5 @@ class Solution(object):
         :type num: int
         :rtype: bool
         """
+        # return len(bin(num)[2:]) % 2 == 1 and len(bin(num)[2:].replace('0', '')) == 1
         return bin(num).replace("00", '') == '0b1'
