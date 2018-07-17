@@ -10,12 +10,9 @@ class Solution(object):
         :type n: int
         :rtype: bool
         """
-        i = 0
-        num = 3 ** i
-        while n != num:
-            if n < num:
-                return False
-            else:
-                i += 1
-                num = 3 ** i
-        return True
+        while n % 3 == 0 and n > 1:
+            n = n / 3
+        if n == 1:
+            return True
+        else:
+            return False
