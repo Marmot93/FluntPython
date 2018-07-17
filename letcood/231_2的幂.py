@@ -10,15 +10,18 @@ class Solution(object):
         :type n: int
         :rtype: bool
         """
-        i = 0
-        num = 2 ** i
-        while n != num:
-            if n < num:
-                return False
-            else:
-                i += 1
-                num = 2 ** i
-        return True
+        # i = 0
+        # num = 2 ** i
+        # while n != num:
+        #     if n < num:
+        #         return False
+        #     else:
+        #         i += 1
+        #         num = 2 ** i
+        # return True
+        if n < 0:
+            return False
+        return bin(n).count("1") == 1
 
 
 print(Solution().isPowerOfTwo(1))
